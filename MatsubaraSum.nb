@@ -1,0 +1,216 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      5218,        207]
+NotebookOptionsPosition[      4232,        168]
+NotebookOutlinePosition[      4586,        184]
+CellTagsIndexPosition[      4543,        181]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Load the package by:", "Text"],
+
+Cell[BoxData[
+ RowBox[{"<<", "MatsubaraSum`"}]], "Input"],
+
+Cell[TextData[{
+ "The package defines the function ",
+ StyleBox["MatsubaraSum", "Input"],
+ " and several notations about distribution functions."
+}], "Text"],
+
+Cell[TextData[{
+ "Generic summation. Result expressed in terms of the distribution function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["n", "\[Eta]"], "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and its derivatives."
+}], "Item"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatsubaraSum", "[", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"z", "-", "\[Epsilon]"}], ")"}], "^", "2"}]}], ",", "z"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "\[Eta]"}], " ", 
+  RowBox[{
+   SubsuperscriptBox["n", "\[Eta]", "\[Prime]"], "[", "\[Epsilon]", 
+   "]"}]}]], "Output"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Specifies the inverse temperature to be ",
+ Cell[BoxData[
+  FormBox["\[Beta]", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". The distribution function will be explicitly given."
+}], "Item"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatsubaraSum", "[", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"z", "-", "\[Epsilon]"}], ")"}], "^", "2"}]}], ",", "z", ",", 
+   "\[Beta]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"\[Beta]", " ", "\[Epsilon]"}]], " ", "\[Beta]", " ", "\[Eta]"}], 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[Beta]", " ", "\[Epsilon]"}]], " ", "\[Eta]"}]}], ")"}], 
+   "2"]]], "Output"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Specifies Matsubara weighting function to be either ",
+ StyleBox["Fermionic", "Input"],
+ " or ",
+ StyleBox["Bosonic", "Input"],
+ "."
+}], "Item"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatsubaraSum", "[", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"z", "-", "\[Epsilon]"}], ")"}], "^", "2"}]}], ",", "z", ",", 
+   RowBox[{"WeightingFunction", "\[Rule]", "Fermionic"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["n", "F", "\[Prime]"], "[", "\[Epsilon]", "]"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatsubaraSum", "[", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"z", "-", "\[Epsilon]"}], ")"}], "^", "2"}]}], ",", "z", ",", 
+   "\[Beta]", ",", 
+   RowBox[{"WeightingFunction", "\[Rule]", "Fermionic"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"\[Beta]", " ", "\[Epsilon]"}]], " ", "\[Beta]"}], 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[Beta]", " ", "\[Epsilon]"}]]}], ")"}], "2"]]}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatsubaraSum", "[", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"z", "-", "\[Epsilon]"}], ")"}], "^", "2"}]}], ",", "z", ",", 
+   "\[Beta]", ",", 
+   RowBox[{"WeightingFunction", "\[Rule]", "Bosonic"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"\[Beta]", " ", "\[Epsilon]"}]], " ", "\[Beta]"}], 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"\[Beta]", " ", "\[Epsilon]"}]]}], ")"}], "2"]]], "Output"]
+}, Open  ]]
+},
+WindowSize->{607, 545},
+WindowMargins->{{371, Automatic}, {Automatic, 64}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 6, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 36, 0, 30, "Text"],
+Cell[584, 22, 57, 1, 28, "Input"],
+Cell[644, 25, 157, 4, 50, "Text"],
+Cell[804, 31, 272, 8, 49, "Item"],
+Cell[CellGroupData[{
+Cell[1101, 43, 202, 7, 28, "Input"],
+Cell[1306, 52, 159, 5, 33, "Output"]
+}, Open  ]],
+Cell[1480, 60, 218, 6, 47, "Item"],
+Cell[CellGroupData[{
+Cell[1723, 70, 219, 7, 28, "Input"],
+Cell[1945, 79, 385, 12, 57, "Output"]
+}, Open  ]],
+Cell[2345, 94, 162, 6, 29, "Item"],
+Cell[CellGroupData[{
+Cell[2532, 104, 263, 7, 28, "Input"],
+Cell[2798, 113, 103, 2, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2938, 120, 283, 8, 28, "Input"],
+Cell[3224, 130, 338, 10, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3599, 145, 281, 8, 28, "Input"],
+Cell[3883, 155, 333, 10, 57, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
