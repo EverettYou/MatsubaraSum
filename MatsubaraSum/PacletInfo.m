@@ -4,8 +4,8 @@
 
 Paclet[
     Name -> "MatsubaraSum",
-    Version -> "0.0.1",
-    MathematicaVersion -> "6+",
+    Version -> "2.0.0",
+    MathematicaVersion -> "11+",
     Extensions -> 
         {
             {"Documentation", Language -> "English"}
